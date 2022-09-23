@@ -1,4 +1,4 @@
-package KensukeNonJUnitTests;
+/**package KensukeNonJUnitTests;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -13,3 +13,4 @@ public class BlobTester {
 	}
 
 }
+**/
