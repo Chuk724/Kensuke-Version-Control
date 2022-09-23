@@ -1,5 +1,8 @@
+package KensukeNonJUnitTests;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+
+import userClasses.Blob;
 
 public class BlobTester {
 

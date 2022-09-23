@@ -1,3 +1,4 @@
+package userClasses;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -8,7 +9,7 @@ import java.util.Map;
 
 
 public class Index {
-	HashMap<String,String> indeces=new HashMap<String,String>();
+	public HashMap<String,String> indeces=new HashMap<String,String>();
 	
 	public Index() {
 		

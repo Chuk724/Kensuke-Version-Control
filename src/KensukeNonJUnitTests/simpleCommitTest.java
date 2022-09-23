@@ -1,4 +1,7 @@
+package KensukeNonJUnitTests;
 import java.io.IOException;
+
+import userClasses.Commit;
 
 public class simpleCommitTest {
 

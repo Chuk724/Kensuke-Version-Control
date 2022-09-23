@@ -1,4 +1,7 @@
+package KensukeNonJUnitTests;
 import java.io.IOException;
+
+import userClasses.Index;
 
 public class IndexTester {
 
