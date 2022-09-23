@@ -37,7 +37,7 @@ public class Tree {
 			String ogFileName = newIndex.get(inputSha);
 			pw.println(s + " " + ogFileName);
 		}
-		pw.write(sb.toString());
+		//pw.write(sb.toString());
 		pw.close();
 	}
 	
