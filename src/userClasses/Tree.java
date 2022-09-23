@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
+import java.util.*;
 
 public class Tree {
 	public Tree(ArrayList<String> input) throws Exception {
@@ -18,6 +18,25 @@ public class Tree {
 		File tree = new File("./tests/objects/" + hash(sb.toString()));
 		tree.createNewFile();
 		PrintWriter pw = new PrintWriter(tree);
+		File index = new File ("./tests/index");
+		
+		//HashMap of fileNames and sha1s in index for folder - <sha1, fileName>
+		HashMap<String, String> newIndex = new HashMap<String, String>();
+		Scanner reader = new Scanner (index);
+		while (reader.hasNextLine()) {
+			String line = reader.nextLine();
+			String fileName = line.substring(0, line.indexOf(" "));
+			String sha1 = line.substring(line.indexOf(":") + 1);
+			newIndex.put(sha1, fileName);
+		}
+		reader.close();
+		
+		
+		for (String s : input) {
+			String inputSha = s.substring(s.indexOf(":") + 1);
+			String ogFileName = newIndex.get(inputSha);
+			pw.println(s + " " + ogFileName);
+		}
 		pw.write(sb.toString());
 		pw.close();
 	}
